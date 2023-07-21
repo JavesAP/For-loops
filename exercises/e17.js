@@ -7,7 +7,12 @@
 
 export function doesArrayInclude(array, value) {
   // Your code goes here...
-
+  for (var obj in array) {
+    if (array[obj] == value) {
+      return true;
+    } 
+  }
+  return false;
 }
 
 

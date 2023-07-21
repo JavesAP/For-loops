@@ -7,7 +7,25 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
+  var aNames = [];
+  var noA = [];
+  for (var name of array) {
+  let boolean = false;
+    for (var i = 0; i <= name.length; i++) {
 
+      if (name[i] === 'a') {
+        boolean = true;
+      } 
+
+    }
+    
+    if (boolean) {
+      aNames.push(name)
+    } else {
+      noA.push(name)
+    }
+  }
+  return [aNames,noA];
 }
 
 

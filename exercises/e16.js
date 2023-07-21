@@ -7,7 +7,19 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-
+  var newArray = [];
+  for (var item of array) {
+    if (typeof item === 'object') {
+      for (let elem of item) {
+        newArray.push(elem);
+      }
+    } else if (typeof item === 'string') { 
+      for (let letter of item) {
+        newArray.push(letter)
+      }  
+    }
+  }
+  return newArray;
 }
 
 

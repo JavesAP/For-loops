@@ -6,7 +6,23 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
+  //var objects = [];
+  //var numberHolder;
+  //var takenOut;
 
+  var withdrawn = [];
+  var sum = 0;
+  for (var obj in array) {
+    for (var i = 0; i <= array[obj].withdrawals?.length; i++)
+    if (array[obj].withdrawals[i] > 0) {
+      sum += array[obj].withdrawals[i];
+    } else { 
+     withdrawn.push(sum);
+     sum = 0;
+     withdrawn.push(0); 
+    }
+  }
+  return withdrawn.slice(0,-1);
 }
 
 // === TEST YOURSELF ===

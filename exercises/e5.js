@@ -6,7 +6,11 @@
 
 export function getAllClientNames(array) {
   // Your code goes here...
-
+  var accountHolders = [];
+  for (var obj in array) {
+    accountHolders.push(array[obj]['name']);
+  }
+  return accountHolders;
 }
 
 
